@@ -1,0 +1,12 @@
+p {
+  font-size: 10px;
+  color: gray;
+}
+
+.typo-font {
+  font-size: xx-small;
+}
+
+.timeline-separator {
+  color: blue;
+}
