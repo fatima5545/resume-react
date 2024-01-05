@@ -10,32 +10,30 @@ import "./CustomTimeLine.css";
 import { Typography } from "@material-ui/core";
 import { styled } from "@mui/material/styles";
 
-const CustomTimelineSeparator = styled(TimelineSeparator)({
-  "& .MuiTimelineDot-root": {
-    backgroundColor: "#00796b",
-  },
-  "& .MuiTimelineConnector-line ": {
-    backgroundColor: "#00796b",
-  },
-});
-
-const CustomTimeLine = ({ title, value }) => {
+const CustomTimeLine = ({ title, icon, children }) => {
   return (
-    <Timeline>
-      <TimelineItem>
-        <CustomTimelineSeparator className="timeline-separator">
-          <TimelineDot />
+    <Timeline className={"timeline"}>
+      {/*Item Header */}
+      <TimelineItem className={"timeline_firstitem"}>
+        <TimelineSeparator>
+          <TimelineDot className={"timeline_dot_header"}>{icon}</TimelineDot>
           <TimelineConnector />
-        </CustomTimelineSeparator>
+        </TimelineSeparator>
         <TimelineContent>
-          <Typography variant="h10" className="typo-font">
+          <Typography variant="h6" className={"timeline_header"}>
             {title}
           </Typography>
-          {/* : <p>{value}</p> */}
         </TimelineContent>
       </TimelineItem>
+      {children}
     </Timeline>
   );
 };
 
+export const CostomTimelineSeparator = () => (
+  <TimelineSeparator className="separator-style">
+    <TimelineDot variant={"outlined"} className={"timeline_dot"} />
+    <TimelineConnector />
+  </TimelineSeparator>
+);
 export default CustomTimeLine;

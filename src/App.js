@@ -32,8 +32,9 @@ function App() {
         <Grid item xs>
           <Router>
             <NavBar />
-            <About />
-            <Resume />
+            <div className="main_content container_shadow resume_content">
+              <Resume />
+            </div>
             {/* <div className="main_content container_shadow">
               <Routes>
                 <Route path="/about" element={<About />} />

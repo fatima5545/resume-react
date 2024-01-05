@@ -8,5 +8,55 @@ p {
 }
 
 .timeline-separator {
-  color: blue;
+  font-size: 20px;
+  color: darkslategray;
+  flex: 0px;
 }
+
+.timeline {
+  padding: 0 im !important;
+}
+/*Header title*/
+.timeline .timeline_header {
+  padding-top: 7px;
+}
+.timeline .timeline_firstitem {
+  min-height: 80px i !important;
+}
+.timeline .MuiTimelineItem-root {
+  min-height: 0;
+}
+.timeline .MuiTimelineItem-missingOppositeContent::before {
+  display: none;
+}
+.timeline .timeline_dot_header {
+  color: black !important;
+  background-color: #00796b !important;
+  font-size: small !important;
+  padding: 7px !important;
+}
+
+/*Remaining Items*/
+
+.timeline_dot {
+  width: 20px;
+  height: 20px;
+  margin-right: 0; /* Adjust margin-right to reduce the space */
+}
+
+.MuiTimelineConnector-root {
+  background-color: #eee !important;
+}
+
+.timeline_dot_header > .MuiSvgIcon-root {
+  font-size: 20px;
+  color: white;
+}
+.separator-style {
+  padding-left: 0;
+}
+.timeline_content {
+  padding-top: 0 !important;
+  margin-bottom: 10px; /* Adjust margin-bottom to reduce the space */
+}
+
