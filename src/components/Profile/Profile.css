@@ -15,9 +15,10 @@
 }
 
 .profile {
-  background-color: 00796b;
+  background-color: #00796b;
   border-radius: 6px;
   width: 100%;
+  height: 400px;
   display: inline-block;
 }
 
@@ -59,4 +60,9 @@ p {
 		text-transform: uppercase;
 		font-size: 9px;
 		box-sizing: border-box;
+}
+
+.skill-level {
+  margin-left: 20px;
+  margin-right: 20px;
 }

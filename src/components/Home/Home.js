@@ -3,7 +3,7 @@ import React from "react";
 import Profile from "../Profile/Profile";
 import NavBar from "../NavBar/NavBar";
 import About from "../About/About";
-import Experience from "../Experience/Experience";
+import Experience from "../Experience/Work";
 import Education from "../Education/Education";
 import Skills from "../Skills/Skills";
 

@@ -15,9 +15,9 @@ const divName = styled("div")({
 
 const Profile = () => {
   return (
-    <div className="profile" style={{ color: "black" }}>
+    <div className="profile" style={{ backgroundColor: "white" }}>
       <div class="project">
-        <div class="diagonal badge">Coolest box</div>
+        <div class="diagonal badge">Développeuse Web</div>
       </div>
       <div className="image-container">
         <img src={imageContent} alt="Your Alt Text" className="rounded-image" />
@@ -27,14 +27,14 @@ const Profile = () => {
           <AccountCircleIcon style={{ color: "#00796b" }} />
         </div>
         <About />
-        <div className="timeline-position">
+        {/* <div className="timeline-position">
           <CustomTimeLine title="Name : Fatima NID-BAHDOU" />
           <CustomTimeLine title="Téléphone : 0647362839" />
           <CustomTimeLine title="Email : fatimanidbahdou123@gmail.com" />
           <CustomTimeLine title="Github : fatimanidbahdou123" />
           <CustomTimeLine title="LinkedIn : fatimanidbahdou123" />
           <CustomTimeLine title="Adresse : Your Address" />
-        </div>
+        </div> */}
       </div>
     </div>
   );

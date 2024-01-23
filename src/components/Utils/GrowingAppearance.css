@@ -1,0 +1,16 @@
+.growing-appearance {
+    opacity: 0;
+    transform: scale(0.5);
+    transition: all 1s ease;
+}
+  
+.growing-appearance.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.image-content {
+  height: 60%;
+  width: 60%;
+}
+  

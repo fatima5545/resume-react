@@ -11,10 +11,13 @@ import travelingImage from "../../images/traveling.gif";
 import travelingImageTwo from "../../images/traveling2.gif";
 import chartImage from "../../images/meta-chart.png";
 import ImageCarouseICard from "../Utils/ImageCarouselCard";
+import Profile from "../Profile/Profile";
+import Experience from "../Experience/Work";
+import Education from "../Education/Education";
 import CustomTimeLine from "../Utils/CustomTimeLine";
 import CostomTimelineSeparator from "../Utils/CustomTimeLine";
 import { TimelineDot, TimelineSeparator } from "@mui/lab/TimelineItem";
-import WorkIcon from "@material-ui/icons/Work";
+// import WorkIcon from "@material-ui/icons/Work";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineContent from "@mui/lab/TimelineContent";
 
@@ -65,273 +68,17 @@ const Resume = () => {
 
   return (
     <div>
-      <div className="row row-card">
-        <div className="col">
-          <div
-            className={`card ${IsHoveredOne ? "hovered" : ""}`}
-            onMouseEnter={() => handleMouseEnter("card-1")}
-            onMouseLeave={() => handleMouseLeave("card-1")}
-          >
-            {!IsHoveredOne && (
-              <div className="card-content">
-                <p>Developer</p>
-                <p>Profile</p>
-                <p>Demo</p>
-                <div className="location-content">
-                  <LocationOnIcon className="color-icon" />
-                  <p className="location-font">Ile de France</p>
-                </div>
-                <div className="about-content">
-                  <p className="location-font">A propos de moi</p>
-                  <ArrowForwardIcon className="color-icon" />
-                </div>
-              </div>
-            )}
-            {IsHoveredOne && (
-              <Box
-                component="main"
-                sx={{
-                  p: 3,
-                  overflowY: "auto", // Enable vertical scrolling
-                  maxHeight: "400px", // Set a maximum height for scrolling
-                }}
-              >
-                {" "}
-                <div className="card-content">
-                  <p>Qui suis-je ?</p>
-                </div>
-                <Toolbar />
-                <p className="card-scroll">
-                  Ingénieur passionné du développement logiciel avec une
-                  expertise de trois ans dans le domaine du développement.
-                </p>
-                <div className="card-content">
-                  <p>Années d'études</p>
-                </div>
-                <p className="card-scroll">
-                  Deux diplômes d'ingénieur en informatique
-                </p>
-              </Box>
-            )}
-          </div>
-        </div>
-
-        <div className="col">
-          <div
-            className={`card card-2 ${IsHoveredFour ? "hovered" : ""}`}
-            onMouseEnter={() => handleMouseEnter("card-4")}
-            onMouseLeave={() => handleMouseLeave("card-4")}
-          >
-            {!IsHoveredFour && (
-              <div className="card-content">
-                <div className="business-icon">
-                  <BusinessCenterIcon
-                    className="white-color-icon"
-                    style={{ fontSize: "10rem" }}
-                  />
-                </div>
-                <div className="about-content">
-                  <p className="location-font location-color">Voir plus</p>
-                  <ArrowForwardIcon className="white-color-icon" />
-                </div>
-              </div>
-            )}
-            {IsHoveredFour && (
-              <Box
-                component="main"
-                sx={{
-                  p: 3,
-                  overflowY: "auto", // Enable vertical scrolling
-                  maxHeight: "400px", // Set a maximum height for scrolling
-                }}
-              >
-                <div>
-                  <CustomTimeLine title={"Experinces"} icon={<WorkIcon />}>
-                    {experiences.map((Experiences) => (
-                      <TimelineItem>
-                        <CostomTimelineSeparator />
-                        <TimelineContent className={"timeline_content"}>
-                          <Typography className={"timeline_title"}>
-                            {Experiences.title}
-                          </Typography>
-                          <Typography
-                            variant={"caption"}
-                            className={"timeline_date"}
-                          >
-                            {Experiences.date}
-                          </Typography>
-                          <Typography
-                            variant={"body2"}
-                            className={"timeline_description"}
-                          >
-                            {Experiences.description}
-                          </Typography>
-                        </TimelineContent>
-                      </TimelineItem>
-                    ))}
-                  </CustomTimeLine>
-                </div>
-              </Box>
-            )}
-          </div>
-        </div>
+      <div
+        id="profile"
+        className="profile main_content container_shadow resume_content centering-elements"
+      >
+        <Profile />
       </div>
-
-      <div className="row row-card">
-        <div className="col">
-          <div
-            className={`card ${IsHoveredOne ? "hovered" : ""}`}
-            onMouseEnter={() => handleMouseEnter("card-1")}
-            onMouseLeave={() => handleMouseLeave("card-1")}
-          >
-            {!IsHoveredOne && (
-              <div className="card-content">
-                <p>Developer</p>
-                <p>Profile</p>
-                <p>Demo</p>
-                <div className="location-content">
-                  <LocationOnIcon className="color-icon" />
-                  <p className="location-font">Ile de France</p>
-                </div>
-                <div className="about-content">
-                  <p className="location-font">A propos de moi</p>
-                  <ArrowForwardIcon className="color-icon" />
-                </div>
-              </div>
-            )}
-            {IsHoveredOne && (
-              <Box
-                component="main"
-                sx={{
-                  p: 3,
-                  overflowY: "auto", // Enable vertical scrolling
-                  maxHeight: "400px", // Set a maximum height for scrolling
-                }}
-              >
-                {" "}
-                <div className="card-content">
-                  <p>Qui suis-je ?</p>
-                </div>
-                <Toolbar />
-                <p className="card-scroll">
-                  Ingénieur passionné du développement logiciel avec une
-                  expertise de trois ans dans le domaine du développement.
-                </p>
-                <div className="card-content">
-                  <p>Années d'études</p>
-                </div>
-                <p className="card-scroll">
-                  Deux diplômes d'ingénieur en informatique
-                </p>
-              </Box>
-            )}
-          </div>
-        </div>
-
-        <div className="col">
-          <div
-            className={`card ${IsHoveredTwo ? "hovered" : ""}`}
-            onMouseEnter={() => handleMouseEnter("card-2")}
-            onMouseLeave={() => handleMouseLeave("card-2")}
-          >
-            {!IsHoveredTwo && (
-              <div className="card-content">
-                <div className="business-icon">
-                  <BusinessCenterIcon
-                    className="color-icon"
-                    style={{ fontSize: "10rem" }}
-                  />
-                </div>
-                <div className="about-content">
-                  <p className="location-font location-color">Voir plus</p>
-                  <ArrowForwardIcon className="color-icon" />
-                </div>
-              </div>
-            )}
-            {IsHoveredTwo && (
-              <Box
-                component="main"
-                sx={{
-                  p: 3,
-                  overflowY: "auto", // Enable vertical scrolling
-                  maxHeight: "400px", // Set a maximum height for scrolling
-                }}
-              >
-                <div>
-                  <CustomTimeLine title={"Experiences"} icon={<WorkIcon />}>
-                    {experiences.map((Experiences) => (
-                      <TimelineItem>
-                        <CostomTimelineSeparator />
-                        <TimelineContent className={"timeline_content"}>
-                          <Typography className={"timeline_title"}>
-                            {Experiences.title}
-                          </Typography>
-                          <Typography
-                            variant={"caption"}
-                            className={"timeline_date"}
-                          >
-                            {Experiences.date}
-                          </Typography>
-                          <Typography
-                            variant={"body2"}
-                            className={"timeline_description"}
-                          >
-                            {Experiences.description}
-                          </Typography>
-                        </TimelineContent>
-                      </TimelineItem>
-                    ))}
-                  </CustomTimeLine>
-                </div>
-              </Box>
-            )}
-          </div>
-        </div>
+      <div id="experience" className="experience">
+        <Experience />
       </div>
-
-      <div className="row row-card">
-        <div className="col">
-          <div className="card">
-            {" "}
-            <ImageCarouseICard images={images} />
-          </div>
-        </div>
-        <div className="col">
-          <div
-            className={`card ${IsHoveredThree ? "hovered" : ""}`}
-            onMouseEnter={() => handleMouseEnter("card-3")}
-            onMouseLeave={() => handleMouseLeave("card-3")}
-          >
-            {!IsHoveredThree && (
-              <div className="card-content">
-                <p className="card-centering">Je parle</p>
-                <p className="card-centering">French</p>
-                <p className="card-centering">English</p>
-                <p className="card-centering">Arabic</p>
-                <div className="about-content">
-                  <p className="location-font">Niveau des langues</p>
-                  <ArrowForwardIcon className="color-icon" />
-                </div>
-              </div>
-            )}
-            {IsHoveredThree && (
-              <Box
-                component="main"
-                sx={{
-                  p: 3,
-                  overflowY: "auto", // Enable vertical scrolling
-                  maxHeight: "400px", // Set a maximum height for scrolling
-                }}
-              >
-                {" "}
-                <div className="card-content card-centering">
-                  <p>Langages</p>
-                  <img src={chartImage} />
-                </div>
-              </Box>
-            )}
-          </div>
-        </div>
+      <div id="education" className="education">
+        <Education />
       </div>
     </div>
   );
