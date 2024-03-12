@@ -4,16 +4,39 @@ import swimmingImage from "../../images/swimming-2.gif";
 import GrowingAppearance from "../Utils/GrowingAppearance";
 const Hobbies = ({ src, alt }) => {
   return (
-    <div className="hobbies">
-      <div className="row">
-        <div className="col">
-          <div className="card-hobbie">
-            <GrowingAppearance src={swimmingImage} alt="Votre Image" />
+    <div class="containerm">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="image-element">
+            {" "}
+            <img
+              className="img-content"
+              src="https://www.uffmag.com/uk/wp-content/uploads/viajes.gif"
+              alt=""
+            />{" "}
+            <i class="i-class fa fa-search fa-3x"></i>{" "}
           </div>
         </div>
-        <div className="col">
-          <div className="card-hobbie">
-            <GrowingAppearance src={swimmingImage} alt="Votre Image" />
+        <div class="col-md-4">
+          <div class="image-element">
+            {" "}
+            <img
+              className="img-content"
+              src="https://i.imgur.com/MMfaOcL.jpg"
+              alt=""
+            />{" "}
+            <i class="i-class fa fa-search fa-3x"></i>{" "}
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="image-element">
+            {" "}
+            <img
+              className="img-content"
+              src="https://i.imgur.com/nOeI05p.jpg"
+              alt=""
+            />{" "}
+            <i class="i-class fa fa-search fa-3x"></i>{" "}
           </div>
         </div>
       </div>

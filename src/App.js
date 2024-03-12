@@ -11,7 +11,9 @@ import Work from "./components/Experience/Work";
 import Hobbies from "./components/Hobbies/Hobbies";
 import NavBar from "./components/NavBar/NavBar";
 import Profile from "./components/Profile/Profile";
-import About from "./components/About/About";
+import AboutMe from "./components/About/About";
+import Competence from "./components/Competence/competence";
+import Contact from "./components/Contact/contact";
 import Resume from "./components/Resume/Resume";
 import Stack from "@mui/material/Stack";
 import Button from "@mui/material/Button";
@@ -21,6 +23,33 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import ParticleButton from "./components/Utils/Particles/buttonparticles";
 function App() {
+  const downloadCV = () => {
+    // Remplacez 'chemin/vers/votre/cv.pdf' par le chemin d'accès réel à votre fichier PDF
+    const pdfUrl = "chemin/vers/votre/cv.pdf";
+
+    // Créez un élément <a> pour déclencher le téléchargement
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+
+    // Spécifiez que le téléchargement doit être forcé et donnez un nom au fichier
+    link.setAttribute("download", "votre_cv.pdf");
+
+    // Ajoutez le lien à la page et déclenchez le clic pour démarrer le téléchargement
+    document.body.appendChild(link);
+    link.click();
+
+    // Supprimez le lien de la page une fois le téléchargement terminé
+    document.body.removeChild(link);
+  };
+
+  const scrollToSection = () => {
+    alert("hello");
+    const hireSection = document.getElementById("contact");
+    if (hireSection) {
+      hireSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     // <Router>
     //   <Routes>
@@ -45,52 +74,83 @@ function App() {
           </div> */}
 
           {/*deuxieme style  */}
-          <div className="div-person">
+          {/* <div className="div-person">
             <p className="person">Hello ! This is Fatima NID-BAHDOU</p>
+          </div> */}
+          {/* <p className="job">WEB DEVELOPER</p> */}
+          <div class="wrapper-class">
+            <a href="#">WEB DEVELOPER</a>
           </div>
-          <p className="job">WEB DEVELOPER</p>
-          <Stack spacing={2} direction="row">
+          <Stack spacing={8} direction="row">
             <ParticleButton
               buttonText="DOWNLOAD CV"
               buttonVariant="contained"
               buttonStyle={{ backgroundColor: "#00796b", color: "white" }}
+              onClick={downloadCV}
             />
             <ParticleButton
               buttonText="HIRE ME"
               buttonVariant="outlined"
               buttonStyle={{ borderColor: "white", color: "white" }}
+              onClick={scrollToSection}
             />
           </Stack>
           <Box
             className="icons"
             sx={{ display: "flex", flexGrow: 1, justifyContent: "flex-end" }}
           >
-            <a href="/" target="_blank">
-              <FacebookIcon style={{ color: "white", marginRight: 8 }} />
-            </a>
-            <a href="/" target="_blank">
-              <TwitterIcon style={{ color: "white", marginRight: 8 }} />
-            </a>
-            <a href="/" target="_blank">
-              <LinkedInIcon style={{ color: "white", marginRight: 8 }} />
-            </a>
-            <a href="/" target="_blank">
-              <GitHubIcon style={{ color: "white", marginRight: 8 }} />
-            </a>
+            <ul class="wrapper">
+              <li class="icon facebook">
+                <span class="tooltip">Facebook</span>
+                <span>
+                  <i class="fab fa-facebook-f"></i>
+                </span>
+              </li>
+              <li class="icon twitter">
+                <span class="tooltip">Twitter</span>
+                <span>
+                  <i class="fab fa-twitter"></i>
+                </span>
+              </li>
+              <li class="icon instagram">
+                <span class="tooltip">Instagram</span>
+                <span>
+                  <i class="fab fa-instagram"></i>
+                </span>
+              </li>
+              <li class="icon github">
+                <span class="tooltip">Github</span>
+                <span>
+                  <i class="fab fa-github"></i>
+                </span>
+              </li>
+              <li class="icon youtube">
+                <span class="tooltip">Youtube</span>
+                <span>
+                  <i class="fab fa-youtube"></i>
+                </span>
+              </li>
+            </ul>
           </Box>
         </div>
       </div>
-      <div id="aboutt" className="aboutt">
-        <About />
+      <div id="about" className="about">
+        <AboutMe />
       </div>
       <div id="experience" className="experience">
         <Work />
+      </div>
+      <div id="competence" className="competence">
+        <Competence />
       </div>
       <div id="hobbies" className="hobbies">
         <Hobbies />
       </div>
       <div id="education" className="education">
         <Education />
+      </div>
+      <div id="contact" className="contact">
+        <Contact />
       </div>
       {/* <Grid container spacing={7}> */}
       {/* <Grid item xs={12} sm={12} lg={3}> */}

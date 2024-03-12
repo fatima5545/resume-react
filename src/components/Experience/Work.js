@@ -15,9 +15,9 @@ const Work = () => {
   const myExperiences = [
     {
       id: 1,
-      title: "Job Title 1",
-      company: "Company A",
-      date: "2019 - Present",
+      title: "Ingénieur logiciel",
+      company: "Quanteam",
+      date: "Oct 2021 - aujourd'hui",
       description1:
         "Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla exercitation. Veniam velit adipisicing anim excepteur nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem est.",
       description2:
@@ -26,9 +26,9 @@ const Work = () => {
     },
     {
       id: 2,
-      title: "Job Title 2",
-      company: "Company A",
-      date: "2019 - Present",
+      title: "Ingénieur logiciel",
+      company: "Societe Generale Corporate and Investment Banking - SGCIB",
+      date: "Oct 2021 - Mars 2023",
       description1:
         "Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla exercitation. Veniam velit adipisicing anim excepteur nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem est.",
       description2:
@@ -37,24 +37,24 @@ const Work = () => {
     },
     {
       id: 3,
-      title: "Job Title 3",
-      company: "Company A",
-      date: "2019 - Present",
+      title: "Ingénieur logiciel et visualisation de données",
+      company: "Ortix",
+      date: "Sept 2020 - Sept 2021",
       description1:
-        "Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla exercitation. Veniam velit adipisicing anim excepteur nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem est.",
+        "Développement d'un logiciel de traçabilité agricole automatique sans saisie.",
       description2:
-        "Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla exercitation. Veniam velit adipisicing anim excepteur nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem est.",
+        "Etude, analyse et intégration des outils d'analyses et de visualization dans le logiciel.",
       color: "#a4c8c0",
     },
     {
       id: 4,
-      title: "Job Title 4",
-      company: "Company A",
-      date: "2019 - Present",
+      title: "Stage",
+      company: "Michelin",
+      date: "Avr 2020 - Août 2020",
       description1:
-        "Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla exercitation. Veniam velit adipisicing anim excepteur nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem est.",
+        "Développement d'un outil de conception des tissus textiles à partir des entrevues des différents concepteurs utilisateurs afin d'hiérarchiser leurs besoins dans le monde de textile.",
       description2:
-        "Est incididunt sint eu minim dolore mollit velit velit commodo ex nulla exercitation. Veniam velit adipisicing anim excepteur nostrud magna nostrud aliqua dolor. Sunt aute est duis ut nulla officia irure reprehenderit laborum fugiat dolore in elit. Adipisicing do qui duis Lorem est.",
+        "Modifier des fonctionnalités et ajouter d'autres pour un prototype des tissus métalliques qui existe déjà . Ajouter des évolutions ergonomiques",
       color: "#daac9a",
     },
     // Add more experiences here

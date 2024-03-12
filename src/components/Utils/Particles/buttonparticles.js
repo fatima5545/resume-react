@@ -20,11 +20,14 @@ const ParticleButton = ({ buttonText, buttonVariant, buttonStyle }) => {
     //     {buttonText}
     //   </Button>
     // </ParticleEffectButton>
-    <div class="box-2">
-      <div class="btn-class btn-two">
+    <a class="btn-slice" href="#">
+      <div class="top">
         <span>{buttonText}</span>
       </div>
-    </div>
+      <div class="bottom">
+        <span>{buttonText}</span>
+      </div>
+    </a>
   );
 };
 

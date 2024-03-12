@@ -1,6 +1,7 @@
 .about {
   min-height: 100vh;
   position: relative;
+  background-color: #f0ecec;
 }
 
 .about .line-styling{
@@ -10,7 +11,6 @@ left: 50%;
 transform: translateX(-50%);
 height: 50px;
 width: 85%;
-
 display: flex;
 align-items: center;
 justify-content: space-between;
@@ -27,134 +27,126 @@ height: 5px;
 border-radius: 10px;
 }
 
-.about-body {
+.wrapper {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  justify-content: space-around;
-  padding-top: 8rem;
-  height: fit-content;
+  padding-top: 100px;
 }
 
-.about-description {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-evenly;
-  flex: 0.5;
+.profile {
+  position: relative;
+  width: 300px;
+  height: 350px;
+  background: url("../../images/cv_photo.jpg");
+  background-size: cover;
+  cursor: pointer;
+  border: 12px;
+  border-top-right-radius: 35px !important;
+  border-radius: 6px;
+}
+
+.overlay {
   width: 100%;
-  height: fit-content;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 12px;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 1s;
+  border-top-right-radius: 35px !important;
+  border-radius: 6px;
 }
 
-.about-description >h2 {
-  margin-bottom: 40px;
-  font-size: 3.5rem;
-  font-family: var(--primaryFont);
+.profile:hover .overlay {
+  opacity: 1;
 }
 
-.about-description > p {
-  font-size: 1.25rem;
-  color: #e0d9d9;
-  font-family: var(--primaryFont);
+.social-icons {
+  display: flex;
+  list-style: none;
+  bottom: 10px;
+  position: absolute;
+  text-align: center;
+  justify-content: center;
+  left: 22px;
 }
 
-.about-img {
-  margin-top: 40px;
-  pointer-events: none;
+.social-icons li {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #eee;
+  padding: 20px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 1s;
 }
 
-.about-img > img {
-  width: 380px;
-  flex: 0.5;
+.social-icons li:hover {
+  background: #fff;
+  color: #000;
 }
 
-@media (min-width: 992px) and (max-width: 1380px) {
-
-  .about-description > h2 {
-    font-size: 3.3rem;
-    margin-bottom: 30px;
-  }
-  .about-description > p {
-    font-size: 1.15rem;
-  }
-
-  .about-img>img {
-      width: 300px;
-  } 
+.overlay .about-me {
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  top: 40%;
+  color: #fff;
+  flex: column;
 }
 
-@media screen and (max-width: 992px){
 
-.about .line-styling{
-  top: 20px;
+
+
+
+
+
+
+.card-list{
+  border:none;
+  position:relative;
+  overflow:hidden;
+  border-radius:8px;
+  cursor:pointer;
+  background:#FFF;
 }
 
-  .about-body {
-      padding-top: 2rem;
-      display: flex;
-      flex-direction: column-reverse;
-      align-items: center;
-      justify-content: space-evenly;
-  }
-
-  .about-description{
-      flex: 0.6;
-      box-sizing: border-box;
-      /* padding: 5% 10%; */
-      padding: 20px;
-
-  }
-
-  .about-description > h2 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-  }
-
-  .about-description > p {
-      font-size: 1.1rem;
-  }
-
-  .about-img > img {
-      width: 250px;
-      flex: 0.4;
-  }
-
+.card-list:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:4px;
+  height:100%;
+  background-color:#afbbc0;
+  transform:scaleY(1);
+  transition:all 0.5s;
+  transform-origin: bottom
 }
 
-@media screen and (max-width: 800px){
-.about .line-styling .style-circle{
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-}
-.about-description > h2{
-  align-self: center;
-}
-
-}
-
-@media screen and (max-width: 600px){
-
-.about .line-styling .style-circle{
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-}
-.about .line-styling .style-line{
-  width: 93%;
-  height: 3px;
-  border-radius: 10px;
+.card-list:after{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:4px;
+  height:100%;
+  background-color:#7b99a5;
+  transform:scaleY(0);
+  transition:all 0.5s;
+  transform-origin: bottom
 }
 
-.about-description > h2 {
-  font-size: 2.5rem;
+.card-list:hover::after{
+  transform:scaleY(1);
 }
 
-  .about-description > p{
-    font-size: 0.95rem;
-  }
-
-  .about-img > img {
-      width: 200px;
-  }
+.fonts{
+  font-size:11px;
 }

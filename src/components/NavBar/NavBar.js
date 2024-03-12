@@ -20,8 +20,9 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import "./NavBar.css";
 
 const pages = [
-  { name: "A propos de moi", link: "profile" },
+  { name: "A propos de moi", link: "about" },
   { name: "Expérience", link: "experience" },
+  { name: "Compétences", link: "competence" },
   { name: "Hobbies", link: "hobbies" },
   { name: "Education", link: "education" },
   { name: "Contact", link: "contact" },
@@ -51,7 +52,7 @@ function NavBar() {
     <AppBar
       position="static"
       sx={{
-        width: "60%",
+        width: "70%",
         marginBottom: "20px",
       }}
       className="app_bar"
